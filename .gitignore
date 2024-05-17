@@ -1,0 +1,23 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Godot specific
+.import/
+.export/
+*.import
+*.tmp
+
+# OS specific
+*.log
+*.swp
+
+# Executables
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Godot settings (optional)
+# *.cfg
+# .godot/
