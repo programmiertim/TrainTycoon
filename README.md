@@ -8,5 +8,6 @@ Ideen zur Spieleerstellung:
 - Random faktor, dass auf einmal ne schiene kaputt geht und man sie ersetzen muss
 - Vll regen/unwetter wo mehrere schienen kaputt macht
 - Und dann irgendwann 2 züge, die sich nicht treffen dürfen/sollen?
-
+- Wenn der zug leer geht, fahrt er nur noch 10% schnell.
+  Dann muss man ihn antippen, dann fahrt er 25% aber nur für 2 Sekunden, also muss man ihn dauernd schupsen, bis er ankommt
 
