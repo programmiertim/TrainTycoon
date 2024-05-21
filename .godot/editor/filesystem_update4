@@ -1,3 +1,4 @@
 res://Main.tscn
-res://Main.gd
 res://HexCell.tscn
+res://HexCell.gd
+res://Main.gd

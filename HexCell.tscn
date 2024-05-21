@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://1bye63kaa36b"]
+[gd_scene load_steps=3 format=3 uid="uid://1bye63kaa36b"]
 
-[ext_resource type="Texture2D" uid="uid://d21hulnc8dyby" path="res://grünesFeld.png" id="1_g0v37"]
+[ext_resource type="Texture2D" uid="uid://gfsjh1g4mbgp" path="res://grünesViereck.png" id="1_4almn"]
+[ext_resource type="Script" path="res://HexCell.gd" id="1_j2kfw"]
 
 [node name="HexCell" type="Node2D"]
+script = ExtResource("1_j2kfw")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.096, 0.1)
-texture = ExtResource("1_g0v37")
+[node name="Hintergrund" type="Sprite2D" parent="."]
+texture = ExtResource("1_4almn")
+
+[node name="Bahnhof" type="Sprite2D" parent="."]
+visible = false
