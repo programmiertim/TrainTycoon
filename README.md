@@ -25,7 +25,9 @@ Spielablauf
 	Idee
 	###
 	Man könnte auch anstatt jede Schiene einzeln zu bauen, das bestehende Kreisgebilde einfach ziehen, somit ist gewährleistet, dass der Zug auch zurückkommt
-
+ ###
+ /Idee
+ ###
 
 - Erreicht der Zug die Station/Haltestelle
 	-Steigen Leute ein und produzieren Geld(?)
@@ -45,4 +47,14 @@ Spielablauf
 
 - Späterer Spielablauf Nach X Runden
 	- Weitere Züge vom Ausgangsbahnhof starten die sich nicht treffen dürfen/sollen
+	- Tag und Nachtzyklus
+
+###
+GUI
+###
+
+- Geldanzeige
+- Treibstoff (wird schwierig bei mehreren Zügen)
+- Uhrzeit (Rund - Bahnhofstyle, Tags schwarz,
+nachts weiß wechselnd
 
