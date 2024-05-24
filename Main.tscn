@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://gum85v21b1hr"]
 
 [ext_resource type="Script" path="res://Scripts/create.gd" id="1_ry5pg"]
-[ext_resource type="Texture2D" uid="uid://c5k2ld3t0lyhk" path="res://Graphics/Tilesets/Solaria Tiles.png" id="2_dpf1f"]
+[ext_resource type="Texture2D" uid="uid://bfjdmb5fr2ki1" path="res://Graphics/Tilesets/Solaria Tiles.png" id="2_dpf1f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0llh"]
 resource_name = "Solaria Tiles"
@@ -388,6 +388,7 @@ script = ExtResource("1_ry5pg")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_qudpk")
+rendering_quadrant_size = 64
 format = 2
 layer_0/name = "ground"
 layer_0/z_index = 1
@@ -395,3 +396,6 @@ layer_0/tile_data = PackedInt32Array(-1, 327682, 0, 0, 327682, 0, -65536, 327682
 layer_1/name = "schienen"
 layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array()
+layer_2/name = "bahnhof"
+layer_2/z_index = 1
+layer_2/tile_data = PackedInt32Array()
