@@ -43,9 +43,9 @@ func _on_HexCell_selected(hex_pos):
 	# Verstecke den Bahnhof des zuvor ausgewählten Hex
 	if selected_hex:
 		var house_node = selected_hex.get_node("Bahnhof")
-		if house_node:
-			print("Hiding previous Bahnhof")
-			house_node.visible = false  # Vorheriges Haus ausblenden
+		#if house_node:
+			#print("Hiding previous Bahnhof")
+			#house_node.visible = false  # Vorheriges Haus ausblenden
 
 	# Aktualisiere das ausgewählte Hex
 	selected_hex = get_hex_cell_at_position(hex_pos)
