@@ -1,5 +1,3 @@
-Ein Test aus Visual Studio raus, Danke ciao!
-
 Train Tycoon
 
 Ideen zur Spieleerstellung:
