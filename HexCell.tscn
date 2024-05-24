@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://1bye63kaa36b"]
 
-[ext_resource type="Texture2D" uid="uid://gfsjh1g4mbgp" path="res://grünesViereck.png" id="1_4almn"]
+[ext_resource type="Texture2D" uid="uid://biip2y735ivrn" path="res://grünesViereck.png" id="1_4almn"]
 [ext_resource type="Script" path="res://HexCell.gd" id="1_j2kfw"]
 
 [node name="HexCell" type="Node2D"]

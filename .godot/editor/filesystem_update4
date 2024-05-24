@@ -1,4 +1,4 @@
 res://Main.tscn
+res://Scripts/create.gd
 res://HexCell.tscn
 res://HexCell.gd
-res://Main.gd

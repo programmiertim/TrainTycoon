@@ -1,14 +1,14 @@
-extends Node2D
+#extends Node2D
 
-signal hex_selected(hex_pos)
+#signal hex_selected(hex_pos)
 
-func _ready():
-	if $Bahnhof:
+#func _ready():
+	#if $Bahnhof:
 		$Bahnhof.texture = preload("res://Bahnhof.png")
 		$Bahnhof.visible = false
 
-func _input(event):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+#func _input(event):
+	#if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		print("Mouse button left pressed in HexCell!")
 		# Überprüfen, ob der Klick innerhalb des Hintergrund-Sprites ist
 		var local_mouse_pos = self.to_local(event.position)
