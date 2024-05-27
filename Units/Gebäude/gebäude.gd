@@ -1,7 +1,8 @@
-extends Node
+extends Node2D
 
 var bezeichnung : String = ""
 var life : int = 0 
+var baukosten : int = 0
 
 # Setter für bezeichnung
 func set_bezeichnung(value):
@@ -18,14 +19,18 @@ func set_life(value):
 	life = value
 	# Hier kannst du zusätzliche Logik hinzufügen
 
-# Getter für tank
+# Getter für baukosten
+func get_baukosten():
+	return baukosten
+	
+	# Setter für baukosten
+func set_baukosten(value):
+	baukosten = value
+	# Hier kannst du zusätzliche Logik hinzufügen
+
+# Getter für life
 func get_life():
 	return life
 
 func _ready():
-	# Initialisieren oder andere Setup-Operationen durchführen
-	set_bezeichnung("Initiale Bezeichnung")
-	set_life(100)
-	
-	print("Bezeichnung: ", get_bezeichnung())
-	print("Lebenspunkte: ", get_life())
+	pass

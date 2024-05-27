@@ -1,13 +1,23 @@
 extends "res://Units/Gebäude/gebäude.gd"
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	set_bezeichnung("Schiene")
 	set_life(5)
-	print("Ich bin eine Schiene!")
+	set_baukosten(2)
 
+	connect("timeout_signal", Callable(self, "_on_timer_timeout"))
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+# Funktion, die aufgerufen wird, wenn das Timer-Timeout-Signal empfangen wird
+func _on_timer_timeout():
+	# Generiere eine Zufallszahl zwischen 0 und 50
+	var random_number = randi() % 51
+	print(random_number)
+	
+	# Wenn die Zufallszahl zwischen 0 und 10 liegt, ziehe 1 vom Leben ab
+	if random_number <= 10:
+		var current_life = get_life()
+		if current_life > 0:
+			set_life(current_life - 1)
+			print("Leben abgezogen. Neues Leben:", get_life())
+		else:
+			print("Das Gebäude hat kein Leben mehr und kann nicht weiter reduziert werden.")
