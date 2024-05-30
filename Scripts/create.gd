@@ -40,7 +40,7 @@ func _input(event):
 		tile_map.set_cell(schienen_layer, tile_mouse_pos, source_id, atlas_coord)
 		
 		# Fügt eine Instanz der Schiene-Szene hinzu und zieht die Baukosten ab
-		add_schiene_at_position(tile_map.map_to_local(tile_mouse_pos))
+		add_schiene_at_position(tile_mouse_pos, tile_map.map_to_local(tile_mouse_pos))
 	
 	if Input.is_action_just_pressed("right_click"):
 		# Liest Mausposition aus
@@ -50,7 +50,7 @@ func _input(event):
 		
 		tile_map.erase_cell(schienen_layer, tile_mouse_pos)
 
-func add_schiene_at_position(position: Vector2):
+func add_schiene_at_position(tile_position: Vector2i, position: Vector2):
 	# Instanzieren der Schiene-Szene
 	var schiene_instance = Schiene_scene.instantiate()
 	
@@ -68,6 +68,8 @@ func add_schiene_at_position(position: Vector2):
 		
 		# Setzen der Position der Instanz
 		schiene_instance.position = position
+		schiene_instance.tile_map = tile_map  # TileMap-Referenz setzen
+		schiene_instance.tile_position = tile_position  # Tile-Position setzen
 		# Hinzufügen der Instanz zur Szene
 		add_child(schiene_instance)
 		# Verbindung zum Signal herstellen und die create-Instanz übergeben

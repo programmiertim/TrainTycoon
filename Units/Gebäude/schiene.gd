@@ -1,8 +1,14 @@
 extends "res://Units/Gebäude/gebäude.gd"
 
+# Referenz zur TileMap (muss beim Hinzufügen gesetzt werden)
+var tile_map : TileMap
+
+# Die Position des Tiles in der TileMap
+var tile_position : Vector2i
+
 func _ready():
 	set_bezeichnung("Schiene")
-	set_life(5)
+	set_life(1)
 	set_baukosten(2)
 
 func _connect(create_instance):
@@ -21,5 +27,15 @@ func _on_timer_timeout():
 		if current_life > 0:
 			set_life(current_life - 1)
 			print("Leben abgezogen. Neues Leben:", get_life())
+			# Wenn das Leben 0 erreicht, entferne den Layer
+			if get_life() == 0:
+				remove_schiene()
 		else:
 			print("Das Gebäude hat kein Leben mehr und kann nicht weiter reduziert werden.")
+
+# Funktion zum Entfernen der Schiene
+func remove_schiene():
+	print("Leben ist 0. Schiene wird entfernt.")
+	if tile_map:
+		tile_map.set_cell(1, tile_position, -1)  # Entfernt das Tile
+	queue_free()  # Entfernt die Schiene-Instanz
