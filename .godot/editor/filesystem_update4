@@ -1,5 +1,4 @@
 res://Szenen/Schiene.tscn
 res://Scripts/create.gd
-res://Units/Gebäude/schiene.gd
 res://Szenen/Main.tscn
-res://Scripts/CustomTimer.gd
+res://Units/Gebäude/schiene.gd

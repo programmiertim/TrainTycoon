@@ -70,6 +70,8 @@ func add_schiene_at_position(position: Vector2):
 		schiene_instance.position = position
 		# Hinzufügen der Instanz zur Szene
 		add_child(schiene_instance)
+		# Verbindung zum Signal herstellen und die create-Instanz übergeben
+		schiene_instance._connect(self)
 	else:
 		print("Nicht genügend Geld für Schiene. Benötigt: ", baukosten, ", Verfügbar: ", geldbeutel)
 
@@ -77,7 +79,7 @@ func _on_Timer_timeout():
 	# Zähler erhöhen und Ausgabe in der Konsole
 	count += 1
 	print("Timer count: ", count)
-	emit_signal("zeit_vergeht", "Nun ist eine Zeiteinheit vergangen")
+	emit_signal("zeit_vergeht")
 	
 func _init_Timer():
 	# Timer erstellen und konfigurieren
