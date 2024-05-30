@@ -1,18 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716837620
-Bahnhof.png::CompressedTexture2D::5508667439404928475::1716211155::1716211158::1::::<><>::
-icon.svg::CompressedTexture2D::4994267274007931813::1715973866::1715973871::1::::<><>::
-Main.tscn::PackedScene::463209761424416815::1716837202::0::1::::<><>::res://Scripts/create.gd<>uid://bfjdmb5fr2ki1::::res://Graphics/Tilesets/Solaria Tiles.png
-README.md::TextFile::-1::1716582816::0::1::::<><>::
-::res://Graphics/::1716582816
-::res://Graphics/Tilesets/::1716583055
-Solaria Tiles.png::CompressedTexture2D::2756147981293409626::1716582816::1716583055::1::::<><>::
-::res://Scripts/::1716837202
-create.gd::GDScript::-1::1716837202::0::1::::<>Node2D<>::
-::res://Szenen/::1716837620
-::res://Units/::1716668703
-::res://Units/Fahrzeuge/::1716668306
-fahrzeug.gd::GDScript::-1::1716668080::0::1::::<>Node<>::
-::res://Units/Gebäude/::1716668955
-gebäude.gd::GDScript::-1::1716668821::0::1::::<>Node<>::
-schiene.gd::GDScript::-1::1716668955::0::1::::<>Node<>::
+::res://::1717093935
+Bahnhof.png::CompressedTexture2D::8383552784665479949::1717093905::1717093935::1::::<><>::
+icon.svg::CompressedTexture2D::4061277712278356214::1717093905::1717093935::1::::<><>::
+README.md::TextFile::-1::1717093905::0::1::::<><>::
+::res://Graphics/::1717093905
+::res://Graphics/Tilesets/::1717093905
+Solaria Tiles.png::CompressedTexture2D::3188138910945802817::1717093905::1717093935::1::::<><>::
+::res://Scripts/::1717093905
+create.gd::GDScript::-1::1717093905::0::1::::<>Node2D<>::
+::res://Units/::1717093905
+::res://Units/Fahrzeuge/::1717093905
+fahrzeug.gd::GDScript::-1::1717093905::0::1::::<>Node<>::
+::res://Units/Gebäude/::1717093905
+gebäude.gd::GDScript::-1::1717093905::0::1::::<>Node2D<>::
+schiene.gd::GDScript::-1::1717093905::0::1::::<>Node2D<>::
