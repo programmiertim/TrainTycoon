@@ -1,8 +1,5 @@
-res://Main.tscn
-res://Scripts/create.gd
 res://Szenen/Schiene.tscn
-res://Szenen/Main.tscn
-res://Units/Gebäude/gebäude.gd
+res://Scripts/create.gd
 res://Units/Gebäude/schiene.gd
+res://Szenen/Main.tscn
 res://Scripts/CustomTimer.gd
-res://timer.tscn

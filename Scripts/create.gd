@@ -11,6 +11,8 @@ var count : int = 0
 
 var geldbeutel : int = 0
 
+signal zeit_vergeht
+
 # Referenz zur Schiene-Szene
 var Schiene_scene : PackedScene = preload("res://Szenen/Schiene.tscn")
 
@@ -75,6 +77,7 @@ func _on_Timer_timeout():
 	# Zähler erhöhen und Ausgabe in der Konsole
 	count += 1
 	print("Timer count: ", count)
+	emit_signal("zeit_vergeht", "Nun ist eine Zeiteinheit vergangen")
 	
 func _init_Timer():
 	# Timer erstellen und konfigurieren
