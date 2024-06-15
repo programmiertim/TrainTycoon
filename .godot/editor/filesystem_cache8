@@ -1,18 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1718460076
+::res://::1718460499
 Bahnhof.png::CompressedTexture2D::2329251827941684390::1718459732::1718459781::1::::<><>::
 icon.svg::CompressedTexture2D::6781285746549193926::1718459732::1718459781::1::::<><>::
 README.md::TextFile::-1::1718459732::0::1::::<><>::
 ::res://Graphics/::1718459732
 ::res://Graphics/Tilesets/::1718459781
 Solaria Tiles.png::CompressedTexture2D::2387915345675463448::1718459732::1718459781::1::::<><>::
-::res://Interface/::1718460085
+::res://Interface/::1718460092
 ::res://Interface/Bar/::1718460085
+::res://Interface/Counter/::1718460092
 ::res://Scripts/::1718459798
 create.gd::GDScript::-1::1718459798::0::1::::<>Node2D<>::
-::res://Szenen/::1718459798
-Main.tscn::PackedScene::463209761424416815::1718459798::0::1::::<><>::res://Scripts/create.gd<>uid://baayu8dihbvam::::res://Graphics/Tilesets/Solaria Tiles.png
-Schiene.tscn::PackedScene::9200307327836314296::1718459798::0::1::::<><>::res://Units/Gebäude/schiene.gd
+::res://Szenen/::1718460492
+Main.tscn::PackedScene::463209761424416815::1718460492::0::1::::<><>::res://Scripts/create.gd<>uid://baayu8dihbvam::::res://Graphics/Tilesets/Solaria Tiles.png
+Schiene.tscn::PackedScene::9200307327836314296::1718460491::0::1::::<><>::res://Units/Gebäude/schiene.gd
 ::res://Units/::1718459732
 ::res://Units/Fahrzeuge/::1718459732
 fahrzeug.gd::GDScript::-1::1718459732::0::1::::<>Node<>::
