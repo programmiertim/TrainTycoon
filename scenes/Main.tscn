@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://gum85v21b1hr"]
 
-[ext_resource type="Script" path="res://Scripts/create.gd" id="1_ry5pg"]
-[ext_resource type="Texture2D" uid="uid://baayu8dihbvam" path="res://Graphics/Tilesets/Solaria Tiles.png" id="2_dpf1f"]
+[ext_resource type="Script" path="res://scripts/create.gd" id="1_ry5pg"]
+[ext_resource type="Texture2D" uid="uid://baayu8dihbvam" path="res://graphics/Tilesets/Solaria Tiles.png" id="2_dpf1f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0llh"]
 resource_name = "Solaria Tiles"

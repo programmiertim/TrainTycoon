@@ -1,4 +1,4 @@
-extends "res://Units/Gebäude/gebäude.gd"
+extends "res://units/Gebäude/gebäude.gd"
 
 # Referenz zur TileMap (muss beim Hinzufügen gesetzt werden)
 var tile_map : TileMap

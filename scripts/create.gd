@@ -14,7 +14,7 @@ var geldbeutel : int = 0
 signal zeit_vergeht
 
 # Referenz zur Schiene-Szene
-var Schiene_scene : PackedScene = preload("res://Szenen/Schiene.tscn")
+var Schiene_scene : PackedScene = preload("res://scenes/Schiene.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

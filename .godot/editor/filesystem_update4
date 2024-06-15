@@ -1,2 +1,3 @@
-res://Szenen/Main.tscn
-res://Scripts/create.gd
+res://scenes/Schiene.tscn
+res://units/Gebäude/schiene.gd
+res://scripts/create.gd
