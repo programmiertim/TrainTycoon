@@ -1,4 +1,4 @@
-res://scenes/Schiene.tscn
-res://units/Gebäude/schiene.gd
-res://scripts/create.gd
+res://interface/counter/Counter.tscn
+res://interface/theme/default_theme.tres
+res://interface/theme/font/default_font.tres
 res://scenes/Main.tscn

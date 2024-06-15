@@ -1,7 +1,10 @@
+Label
+TextureRect
+NinePatchRect
+Control
 Node
 Sprite2D
 Node2D
 Timer
-NinePatchRect
 TileMap
 Polygon2D

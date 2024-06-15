@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://24gwiieoh7xc"]
+
+[ext_resource type="Texture2D" uid="uid://cmppcv8hl0yfk" path="res://interface/counter/label_bg.png" id="1_gm3ft"]
+[ext_resource type="Texture2D" uid="uid://cjg0ncmgyls7n" path="res://interface/counter/bombs/icon.png" id="2_mmscj"]
+[ext_resource type="Theme" uid="uid://bovlvdry8agkg" path="res://interface/theme/default_theme.tres" id="3_jnwel"]
+
+[node name="Counter" type="NinePatchRect"]
+offset_left = -2.0
+offset_right = 250.0
+offset_bottom = 100.0
+texture = ExtResource("1_gm3ft")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -72.0
+offset_bottom = 66.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_mmscj")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -32.0
+offset_right = 148.0
+offset_bottom = 49.0
+grow_vertical = 2
+theme = ExtResource("3_jnwel")
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1

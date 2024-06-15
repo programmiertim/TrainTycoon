@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://gum85v21b1hr"]
+[gd_scene load_steps=7 format=3 uid="uid://gum85v21b1hr"]
 
 [ext_resource type="Script" path="res://scripts/create.gd" id="1_ry5pg"]
 [ext_resource type="Texture2D" uid="uid://baayu8dihbvam" path="res://graphics/Tilesets/Solaria Tiles.png" id="2_dpf1f"]
+[ext_resource type="PackedScene" uid="uid://2nk523fybk8h" path="res://interface/interface.tscn" id="2_e1id6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0llh"]
 resource_name = "Solaria Tiles"
@@ -385,6 +386,8 @@ sources/4 = SubResource("TileSetAtlasSource_ptn8p")
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ry5pg")
+
+[node name="interface" parent="." instance=ExtResource("2_e1id6")]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_qudpk")
