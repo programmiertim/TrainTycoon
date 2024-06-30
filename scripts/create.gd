@@ -21,10 +21,12 @@ func _ready():
 	_init_Timer()
 	geldbeutel = 100
 	print("Spielstart mit 100 Geld")
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _process(delta: float) -> void:
+	$TimeRemaining.text = "%s" % roundf($Timer.time_left)
+	
 
 func _input(event):
 	if Input.is_action_just_pressed("click"):
@@ -77,8 +79,9 @@ func add_schiene_at_position(tile_position: Vector2i, position: Vector2):
 	else:
 		print("Nicht genügend Geld für Schiene. Benötigt: ", baukosten, ", Verfügbar: ", geldbeutel)
 
-func _on_Timer_timeout():
-	# Zähler erhöhen und Ausgabe in der Konsole
+
+func _on_timer_timeout():
+		# Zähler erhöhen und Ausgabe in der Konsole
 	count += 1
 	print("Timer count: ", count)
 	emit_signal("zeit_vergeht")
@@ -92,3 +95,4 @@ func _init_Timer():
 	
 	# Timer starten
 	timer.start()
+
