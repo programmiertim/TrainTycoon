@@ -1,4 +1,4 @@
-extends Node2D
+extends "res://scripts/gebäude.gd"
 
 # Referenz zur TileMap (muss beim Hinzufügen gesetzt werden)
 var tile_map : TileMap
