@@ -2,13 +2,13 @@ extends "res://scripts/gebäude.gd"
 
 # Referenz zur TileMap (muss beim Hinzufügen gesetzt werden)
 var tile_map : TileMap
-const MAIN = preload("res://scenes/Main.tscn")
-const SCHIENE = preload("res://scenes/Schiene.tscn")
 # Die Position des Tiles in der TileMap
 var tile_position : Vector2i
 
 func _ready():
-	pass
+	set_bezeichnung("Schiene")
+	set_baukosten(5)
+	set_life(10)
 
 
 func _connect(create_instance):

@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://gum85v21b1hr"]
+[gd_scene load_steps=9 format=3 uid="uid://gum85v21b1hr"]
 
 [ext_resource type="Script" path="res://scripts/create.gd" id="1_nc8y7"]
-[ext_resource type="Texture2D" uid="uid://csg6vjv5ky1sa" path="res://assets/sprites/Solaria Tiles.png" id="2_dpf1f"]
-[ext_resource type="Texture2D" uid="uid://d1rfynk3b2mc5" path="res://assets/sprites/Trains/train_v18.png" id="2_ixaf4"]
-[ext_resource type="PackedScene" uid="uid://ckua8gtlwpoj3" path="res://scenes/Schiene.tscn" id="4_c1srx"]
+[ext_resource type="Texture2D" uid="uid://4i3xbq4w6rwp" path="res://assets/sprites/Solaria Tiles.png" id="2_dpf1f"]
+[ext_resource type="Texture2D" uid="uid://c1ikvov44y4hm" path="res://assets/sprites/Trains/train_v18.png" id="2_ixaf4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ro84"]
 atlas = ExtResource("2_ixaf4")
@@ -428,5 +427,3 @@ layer_1/tile_data = PackedInt32Array()
 layer_2/name = "bahnhof"
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array()
-
-[node name="Schiene" parent="." instance=ExtResource("4_c1srx")]

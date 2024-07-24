@@ -1,8 +1,8 @@
 extends Node2D
 
-var bezeichnung : String = ""
-var life : int = 0 
-var baukosten : int = 0
+@export var bezeichnung : String = ""
+@export var life : int = 0 
+@export var baukosten : int = 0
 
 # Setter für bezeichnung
 func set_bezeichnung(value):
