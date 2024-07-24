@@ -24,9 +24,8 @@ func _ready():
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	$TimeRemaining.text = "%s" % roundf($Timer.time_left)
-	
+func _process(delta):
+
 
 func _input(event):
 	if Input.is_action_just_pressed("click"):

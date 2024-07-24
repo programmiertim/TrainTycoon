@@ -1,3 +1,6 @@
+AnimationPlayer
+AnimatedSprite2D
+Camera2D
 Label
 Timer
 TextureRect

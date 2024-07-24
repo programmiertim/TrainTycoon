@@ -1,6 +1,2 @@
 res://scenes/Main.tscn
-res://interface/theme/font/default_font.tres
-res://interface/theme/default_theme.tres
-res://interface/interface.tscn
-res://interface/counter/Counter.tscn
 res://scripts/create.gd
