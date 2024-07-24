@@ -25,7 +25,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-
+	pass
 
 func _input(event):
 	if Input.is_action_just_pressed("click"):
@@ -37,18 +37,14 @@ func _input(event):
 		var source_id : int = 2
 		# Pickt das Tile in Position aus
 		var atlas_coord : Vector2i = Vector2i(19, 1)
-		
 		tile_map.set_cell(schienen_layer, tile_mouse_pos, source_id, atlas_coord)
-		
 		# Fügt eine Instanz der Schiene-Szene hinzu und zieht die Baukosten ab
 		add_schiene_at_position(tile_mouse_pos, tile_map.map_to_local(tile_mouse_pos))
-	
 	if Input.is_action_just_pressed("right_click"):
 		# Liest Mausposition aus
 		var mouse_pos : Vector2 = get_global_mouse_position()
 		# Minimiert die Position auf das Tile
 		var tile_mouse_pos : Vector2i = tile_map.local_to_map(mouse_pos)
-		
 		tile_map.erase_cell(schienen_layer, tile_mouse_pos)
 
 func add_schiene_at_position(tile_position: Vector2i, position: Vector2):

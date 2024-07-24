@@ -1,8 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4cxyno6oo5xc"]
-
-[ext_resource type="Script" path="res://scripts/schiene.gd" id="1_qi8bq"]
+[gd_scene format=3 uid="uid://ckua8gtlwpoj3"]
 
 [node name="Schiene" type="Node2D"]
-script = ExtResource("1_qi8bq")
-
-[node name="AnzeigeSchaden" type="Sprite2D" parent="."]

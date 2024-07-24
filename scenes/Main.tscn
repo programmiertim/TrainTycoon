@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://gum85v21b1hr"]
+[gd_scene load_steps=10 format=3 uid="uid://gum85v21b1hr"]
 
-[ext_resource type="Texture2D" uid="uid://bmb5dkid8tyhv" path="res://assets/sprites/Solaria Tiles.png" id="2_dpf1f"]
-[ext_resource type="Texture2D" uid="uid://c0b7v4wtpg0vu" path="res://assets/sprites/Trains/train_v18.png" id="2_ixaf4"]
+[ext_resource type="Script" path="res://scripts/create.gd" id="1_nc8y7"]
+[ext_resource type="Texture2D" uid="uid://4i3xbq4w6rwp" path="res://assets/sprites/Solaria Tiles.png" id="2_dpf1f"]
+[ext_resource type="Texture2D" uid="uid://c1ikvov44y4hm" path="res://assets/sprites/Trains/train_v18.png" id="2_ixaf4"]
+[ext_resource type="PackedScene" uid="uid://ckua8gtlwpoj3" path="res://scenes/Schiene.tscn" id="4_c1srx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ro84"]
 atlas = ExtResource("2_ixaf4")
@@ -399,6 +401,7 @@ sources/2 = SubResource("TileSetAtlasSource_b0llh")
 sources/4 = SubResource("TileSetAtlasSource_ptn8p")
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_nc8y7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 5
@@ -407,7 +410,7 @@ scale = Vector2(0.625, 0.625)
 sprite_frames = SubResource("SpriteFrames_oshp7")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.591327
+frame_progress = 0.677679
 
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 position = Vector2(691.2, 134.4)
@@ -425,3 +428,5 @@ layer_1/tile_data = PackedInt32Array()
 layer_2/name = "bahnhof"
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array()
+
+[node name="Schiene" parent="." instance=ExtResource("4_c1srx")]
