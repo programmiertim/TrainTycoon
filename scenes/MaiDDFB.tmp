@@ -408,12 +408,12 @@ unique_name_in_owner = true
 script = ExtResource("2_oiblh")
 
 [node name="Goldstand" type="Label" parent="GameManager"]
-z_index = 1
-z_as_relative = false
-offset_left = 1032.0
-offset_right = 1168.0
-offset_bottom = 40.0
-horizontal_alignment = 1
+top_level = true
+offset_left = 456.0
+offset_top = 344.0
+offset_right = 552.0
+offset_bottom = 392.0
+horizontal_alignment = 2
 vertical_alignment = 1
 autowrap_mode = 2
 
@@ -430,6 +430,7 @@ frame_progress = 0.677679
 position = Vector2(234.666, -256)
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 tile_set = SubResource("TileSet_qudpk")
 rendering_quadrant_size = 64
 format = 2

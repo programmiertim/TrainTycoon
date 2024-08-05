@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var tile_map = $TileMap
+@onready var game_manager = %GameManager
 
 var ground_layer = 0
 var schienen_layer = 1
@@ -9,7 +10,7 @@ var bahnhof_layer = 2
 var timer : Timer
 var count : int = 0
 
-var geldbeutel : int = 0
+
 
 signal zeit_vergeht
 
@@ -19,13 +20,14 @@ var Schiene_scene : PackedScene = preload("res://scenes/Schiene.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_init_Timer()
-	geldbeutel = 100
+	game_manager.geldbeutel = 100
+	
 	print("Spielstart mit 100 Geld")
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	game_manager.goldstand.text = "Gold: " + str(game_manager.geldbeutel)
 
 func _input(event):
 	if Input.is_action_just_pressed("click"):
@@ -58,10 +60,10 @@ func add_schiene_at_position(tile_position: Vector2i, position: Vector2):
 	var baukosten = schiene_instance.get_baukosten()
 	
 	# Prüfen, ob genügend Geld vorhanden ist
-	if geldbeutel >= baukosten:
+	if game_manager.geldbeutel >= baukosten:
 		# Baukosten abziehen
-		geldbeutel -= baukosten
-		print("Schiene gebaut für ", baukosten, " Geld. Verbleibend: ", geldbeutel)
+		game_manager.geldbeutel -= baukosten
+		print("Schiene gebaut für ", baukosten, " Geld. Verbleibend: ", game_manager.geldbeutel)
 		
 		# Setzen der Position der Instanz
 		schiene_instance.position = position
@@ -72,7 +74,7 @@ func add_schiene_at_position(tile_position: Vector2i, position: Vector2):
 		# Verbindung zum Signal herstellen und die create-Instanz übergeben
 		schiene_instance._connect(self)
 	else:
-		print("Nicht genügend Geld für Schiene. Benötigt: ", baukosten, ", Verfügbar: ", geldbeutel)
+		print("Nicht genügend Geld für Schiene. Benötigt: ", baukosten, ", Verfügbar: ", game_manager.geldbeutel)
 
 
 func _on_timer_timeout():

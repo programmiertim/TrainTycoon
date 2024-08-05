@@ -407,16 +407,6 @@ script = ExtResource("1_nc8y7")
 unique_name_in_owner = true
 script = ExtResource("2_oiblh")
 
-[node name="Goldstand" type="Label" parent="GameManager"]
-z_index = 1
-z_as_relative = false
-offset_left = 1032.0
-offset_right = 1168.0
-offset_bottom = 40.0
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 5
 position = Vector2(504, 416)
@@ -442,3 +432,13 @@ layer_1/tile_data = PackedInt32Array()
 layer_2/name = "bahnhof"
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array()
+
+[node name="Goldstand" type="Label" parent="."]
+z_index = 10
+offset_left = 1056.0
+offset_right = 1168.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 24
+text = "Gold: "
+horizontal_alignment = 2
+vertical_alignment = 1

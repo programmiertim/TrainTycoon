@@ -1,9 +1,9 @@
-Node2D
+Label
 Node
+Node2D
 AnimationPlayer
 AnimatedSprite2D
 Camera2D
-Label
 Timer
 TextureRect
 NinePatchRect
