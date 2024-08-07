@@ -7,9 +7,6 @@ var ground_layer = 0
 var schienen_layer = 1
 var bahnhof_layer = 2
 
-var timer : Timer
-var count : int = 0
-
 
 
 signal zeit_vergeht
@@ -19,15 +16,14 @@ var Schiene_scene : PackedScene = preload("res://scenes/Schiene.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_init_Timer()
 	game_manager.geldbeutel = 100
-	
 	print("Spielstart mit 100 Geld")
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	game_manager.goldstand.text = "Gold: " + str(game_manager.geldbeutel)
+	game_manager.goldstand_label.text = "Gold: " + str(game_manager.geldbeutel)
+	game_manager.uhr_label.text = "Uhrzeit: " + str(game_manager.clock)
 
 func _input(event):
 	if Input.is_action_just_pressed("click"):
@@ -38,10 +34,10 @@ func _input(event):
 		# Liest das TileFile mit der ID
 		var source_id : int = 2
 		# Pickt das Tile in Position aus
-		var atlas_coord : Vector2i = Vector2i(19, 1)
-		tile_map.set_cell(schienen_layer, tile_mouse_pos, source_id, atlas_coord)
+		var atlas_coord : Vector2i = Vector2i(19, 1)		
 		# Fügt eine Instanz der Schiene-Szene hinzu und zieht die Baukosten ab
-		add_schiene_at_position(tile_mouse_pos, tile_map.map_to_local(tile_mouse_pos))
+		if add_schiene_at_position(tile_mouse_pos, tile_map.map_to_local(tile_mouse_pos)):
+			tile_map.set_cell(schienen_layer, tile_mouse_pos, source_id, atlas_coord)
 	if Input.is_action_just_pressed("right_click"):
 		# Liest Mausposition aus
 		var mouse_pos : Vector2 = get_global_mouse_position()
@@ -49,13 +45,11 @@ func _input(event):
 		var tile_mouse_pos : Vector2i = tile_map.local_to_map(mouse_pos)
 		tile_map.erase_cell(schienen_layer, tile_mouse_pos)
 
-func add_schiene_at_position(tile_position: Vector2i, position: Vector2):
+func add_schiene_at_position(tile_position: Vector2i, position: Vector2) -> bool:
 	# Instanzieren der Schiene-Szene
 	var schiene_instance = Schiene_scene.instantiate()
-	
 	# Sicherstellen, dass _ready() aufgerufen wurde
-	schiene_instance.call("_ready")
-	
+	schiene_instance.call("_ready")	
 	# Baukosten der Schiene abrufen
 	var baukosten = schiene_instance.get_baukosten()
 	
@@ -63,6 +57,7 @@ func add_schiene_at_position(tile_position: Vector2i, position: Vector2):
 	if game_manager.geldbeutel >= baukosten:
 		# Baukosten abziehen
 		game_manager.geldbeutel -= baukosten
+		game_manager.hinweis.text = str("Schiene gebaut für ", baukosten)
 		print("Schiene gebaut für ", baukosten, " Geld. Verbleibend: ", game_manager.geldbeutel)
 		
 		# Setzen der Position der Instanz
@@ -71,25 +66,14 @@ func add_schiene_at_position(tile_position: Vector2i, position: Vector2):
 		schiene_instance.tile_position = tile_position  # Tile-Position setzen
 		# Hinzufügen der Instanz zur Szene
 		add_child(schiene_instance)
-		# Verbindung zum Signal herstellen und die create-Instanz übergeben
-		schiene_instance._connect(self)
+		return true
 	else:
+		game_manager.fehler.text = str("Nicht genügend Geld für Schiene. Benötigt: ", baukosten, ", Verfügbar: ", game_manager.geldbeutel)
 		print("Nicht genügend Geld für Schiene. Benötigt: ", baukosten, ", Verfügbar: ", game_manager.geldbeutel)
+		return false
 
 
-func _on_timer_timeout():
-		# Zähler erhöhen und Ausgabe in der Konsole
-	count += 1
-	print("Timer count: ", count)
-	emit_signal("zeit_vergeht")
+
 	
-func _init_Timer():
-	# Timer erstellen und konfigurieren
-	timer = Timer.new()
-	timer.wait_time = 3.0
-	timer.connect("timeout", Callable(self, "_on_Timer_timeout"))
-	add_child(timer)
-	
-	# Timer starten
-	timer.start()
+
 

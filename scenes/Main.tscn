@@ -417,6 +417,32 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="Hinweis" type="Label" parent="GameManager"]
+z_index = 1
+offset_left = 448.0
+offset_top = 120.0
+offset_right = 760.0
+offset_bottom = 143.0
+autowrap_mode = 2
+
+[node name="Fehler" type="Label" parent="GameManager"]
+z_index = 1
+offset_left = 440.0
+offset_top = 288.0
+offset_right = 680.0
+offset_bottom = 311.0
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="GameManager"]
+autostart = true
+
+[node name="Uhr" type="Label" parent="GameManager"]
+z_index = 1
+offset_left = 1040.0
+offset_top = 40.0
+offset_right = 1168.0
+offset_bottom = 80.0
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 5
 position = Vector2(504, 416)
@@ -442,3 +468,5 @@ layer_1/tile_data = PackedInt32Array()
 layer_2/name = "bahnhof"
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array()
+
+[connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]

@@ -10,10 +10,8 @@ func _ready():
 	set_baukosten(5)
 	set_life(10)
 
-
-func _connect(create_instance):
-	# Verbinde das Signal "zeit_vergeht" von der create_instance mit der Funktion "_on_timer_timeout"
-	create_instance.connect("zeit_vergeht", Callable(self, "_on_timer_timeout"))
+	# Verbindung zum Signal "zeit_vergeht" herstellen
+	%GameManager.connect("zeit_vergeht", Callable(self, "_on_timer_timeout"))
 
 # Funktion, die aufgerufen wird, wenn das Timer-Timeout-Signal empfangen wird
 func _on_timer_timeout():
