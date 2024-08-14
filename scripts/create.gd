@@ -57,8 +57,8 @@ func add_schiene_at_position(tile_position: Vector2i, position: Vector2) -> bool
 	if game_manager.geldbeutel >= baukosten:
 		# Baukosten abziehen
 		game_manager.geldbeutel -= baukosten
-		game_manager.hinweis.text = str("Schiene gebaut für ", baukosten)
-		print("Schiene gebaut für ", baukosten, " Geld. Verbleibend: ", game_manager.geldbeutel)
+		FadingNumbers.display_number(baukosten, position, false, false)
+		FadingNumbers.display_text(str("Schiene gebaut für ", baukosten, " Geld. Verbleibend: ", game_manager.geldbeutel), position, false)
 		
 		# Setzen der Position der Instanz
 		schiene_instance.position = position
@@ -68,8 +68,8 @@ func add_schiene_at_position(tile_position: Vector2i, position: Vector2) -> bool
 		add_child(schiene_instance)
 		return true
 	else:
-		game_manager.fehler.text = str("Nicht genügend Geld für Schiene. Benötigt: ", baukosten, ", Verfügbar: ", game_manager.geldbeutel)
-		print("Nicht genügend Geld für Schiene. Benötigt: ", baukosten, ", Verfügbar: ", game_manager.geldbeutel)
+		FadingNumbers.display_text(str("Nicht genügend Geld für Schiene. Benötigt: ", baukosten, ", Verfügbar: ", game_manager.geldbeutel),position, true)
+		FadingNumbers.display_number(baukosten, position, true, false)
 		return false
 
 

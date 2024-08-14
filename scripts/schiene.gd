@@ -11,7 +11,7 @@ func _ready():
 	set_life(10)
 
 	# Verbindung zum Signal "zeit_vergeht" herstellen
-	%GameManager.connect("zeit_vergeht", Callable(self, "_on_timer_timeout"))
+	#%GameManager.connect("zeit_vergeht", Callable(self, "_on_timer_timeout"))
 
 # Funktion, die aufgerufen wird, wenn das Timer-Timeout-Signal empfangen wird
 func _on_timer_timeout():
