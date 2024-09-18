@@ -1,6 +1,9 @@
+Popup
+Node
+Button
+ItemList
 Label
 Timer
-Node
 Node2D
 AnimationPlayer
 AnimatedSprite2D
@@ -9,5 +12,3 @@ TextureRect
 NinePatchRect
 Control
 Sprite2D
-TileMap
-Polygon2D

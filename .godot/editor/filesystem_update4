@@ -1,2 +1,7 @@
+res://scripts/game_manager.gd
 res://scenes/Main.tscn
 res://scripts/create.gd
+res://scripts/schiene.gd
+res://scripts/gebäude.gd
+res://scenes/BuildingSelectionPopup.tscn
+res://scenes/Schiene.tscn

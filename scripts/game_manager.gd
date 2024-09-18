@@ -1,7 +1,5 @@
 extends Node
 @onready var goldstand_label = $Goldstand
-@onready var fehler = $Fehler
-@onready var hinweis = $Hinweis
 @onready var timer = $Timer
 @onready var uhr_label = $Uhr
 

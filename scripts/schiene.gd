@@ -9,15 +9,14 @@ func _ready():
 	set_bezeichnung("Schiene")
 	set_baukosten(5)
 	set_life(10)
-
-	# Verbindung zum Signal "zeit_vergeht" herstellen
-	#%GameManager.connect("zeit_vergeht", Callable(self, "_on_timer_timeout"))
+	var game_manager = get_node("/root/Main/GameManager")
+	if game_manager:
+		game_manager.connect("zeit_vergeht", Callable(self, "_on_timer_timeout"))
 
 # Funktion, die aufgerufen wird, wenn das Timer-Timeout-Signal empfangen wird
 func _on_timer_timeout():
 	# Generiere eine Zufallszahl zwischen 0 und 50
 	var random_number = randi() % 51
-	print(random_number)
 	
 	# Wenn die Zufallszahl zwischen 0 und 10 liegt, ziehe 1 vom Leben ab
 	if random_number <= 10:
