@@ -1,11 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1723056880
+::res://::1726686735
 icon.svg::CompressedTexture2D::5185379099833872111::1716665489::1722449889::1::::<><>::
 README.md::TextFile::-1::1716665489::0::1::::<><>::
 ::res://assets/::1721848014
 ::res://assets/sprites/::1722449889
 Solaria Tiles.png::CompressedTexture2D::2182425220095603987::1721848014::1722449889::1::::<><>::
 ::res://assets/sprites/Trains/::1722449889
+_credits.txt::TextFile::-1::1721848014::0::1::::<><>::
 carriage_v18_car1.png::CompressedTexture2D::2643536643488047323::1721848014::1722449889::1::::<><>::
 carriage_v18_car2.png::CompressedTexture2D::4579316246904850919::1721848014::1722449889::1::::<><>::
 carriage_v18_car3.png::CompressedTexture2D::678417139568580040::1721848014::1722449889::1::::<><>::
@@ -19,13 +20,13 @@ railtrack_v1.png::CompressedTexture2D::8028901006548414852::1721848014::17224498
 sheet_carriage_v18.png::CompressedTexture2D::201297802739066896::1721848014::1722449889::1::::<><>::
 sheet_train_v18.png::CompressedTexture2D::5770548762385554772::1721848014::1722449889::1::::<><>::
 train_v18.png::CompressedTexture2D::3544576762812010957::1721848014::1722449889::1::::<><>::
-_credits.txt::TextFile::-1::1721848014::0::1::::<><>::
-::res://scenes/::1723056763
-Main.tscn::PackedScene::463209761424416815::1723056763::0::1::::<><>::res://scripts/create.gd<>uid://6dghvsqmquln::::res://assets/sprites/Solaria Tiles.png<>uid://bqrawquh3h61f::::res://assets/sprites/Trains/train_v18.png<>res://scripts/game_manager.gd
+::res://scenes/::1723667480
+Main.tscn::PackedScene::463209761424416815::1723666179::0::1::::<><>::res://scripts/create.gd<>uid://6dghvsqmquln::::res://assets/sprites/Solaria Tiles.png<>uid://bqrawquh3h61f::::res://assets/sprites/Trains/train_v18.png<>res://scripts/game_manager.gd
 Schiene.tscn::PackedScene::5516076635067762942::1722449938::0::1::::<><>::res://scripts/schiene.gd
-::res://scripts/::1723056763
-create.gd::GDScript::-1::1723056763::0::1::::<>Node2D<>::
+::res://scripts/::1723666179
+create.gd::GDScript::-1::1723665357::0::1::::<>Node2D<>::
+fadingNumbers.gd::GDScript::-1::1723666179::0::1::::<>Node<>::
 fahrzeug.gd::GDScript::-1::1721848014::0::1::::<>Node2D<>::
-game_manager.gd::GDScript::-1::1723056763::0::1::::<>Node<>::
+game_manager.gd::GDScript::-1::1723062391::0::1::::<>Node<>::
 gebäude.gd::GDScript::-1::1721851477::0::1::::<>Node2D<>::
-schiene.gd::GDScript::-1::1721853128::0::1::::<>Node2D<>::
+schiene.gd::GDScript::-1::1723664519::0::1::::<>Node2D<>::
