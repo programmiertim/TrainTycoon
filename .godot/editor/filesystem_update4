@@ -1,4 +1,2 @@
 res://scenes/Main.tscn
 res://scripts/create.gd
-res://scripts/game_manager.gd
-res://scripts/schiene.gd
